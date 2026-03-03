@@ -75,11 +75,11 @@ Create an `appsettings.json` file with your Kafka configuration:
 
 The `BootstrapServers` is found int the Aiven service page, in the `Connection information` section and Appache Kafka tab.
 
-![Bootstrap URL](docs/images/bootstrap-url.png)
+![Bootstrap URL](../docs/images/bootstrap-url.png)
 
 The `SchemaRegistry.Url` is found int the Aiven service page, in the `Connection information` section and Schema Registry tab.
 
-![Schema Registry URL](docs/images/registry-url.png)
+![Schema Registry URL](../docs/images/registry-url.png)
 ## Usage
 
 ### 1. Register Kafka Services
