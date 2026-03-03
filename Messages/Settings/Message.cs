@@ -1,4 +1,4 @@
-namespace MessagePublisher.Settings;
+namespace Messages.Settings;
 
 public record Message(
     string Topic,
@@ -8,7 +8,8 @@ public record Message(
 {
     public string GetSchemaPath()
     {
-        var path = Path.Combine("schemas", SchemaFile);
+        var schemaPath = Path.Combine(AppContext.BaseDirectory, "schemas");
+        var path = Path.Combine(schemaPath, SchemaFile);
 
         if (!File.Exists(path))
         {

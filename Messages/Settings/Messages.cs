@@ -1,4 +1,4 @@
-namespace MessagePublisher.Settings;
+namespace Messages.Settings;
 
 public record Messages(
     Message AddressChangeDetected,

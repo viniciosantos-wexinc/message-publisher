@@ -1,7 +1,7 @@
 ﻿using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 
-namespace MessagePublisher.Models;
+namespace Messages.Models;
 
 [DataContract(Name = nameof(AddressChangeDetected), Namespace = "wex.health.be.benefits")]
 public record AddressChangeDetected

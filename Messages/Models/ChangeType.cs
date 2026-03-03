@@ -1,4 +1,4 @@
-namespace MessagePublisher.Models;
+namespace Messages.Models;
 
 public enum ChangeType
 {

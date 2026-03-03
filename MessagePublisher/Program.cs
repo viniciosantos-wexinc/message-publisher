@@ -1,7 +1,6 @@
 ﻿using AutoFixture;
 using MessagePublisher;
-using MessagePublisher.Models;
-using MessagePublisher.Settings;
+using Messages.Models;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -11,12 +10,12 @@ using Wex.Libraries.Kafka.DependencyInjection;
 var builder = Host.CreateApplicationBuilder(args);
 
 builder.Configuration
-    .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
-    .AddJsonFile($"appsettings.{builder.Environment.EnvironmentName.ToLower()}.json", optional: true, reloadOnChange: true);
+    .AddJsonFile(Path.Combine(AppContext.BaseDirectory, "appsettings.json"), optional: false, reloadOnChange: true)
+    .AddJsonFile(Path.Combine(AppContext.BaseDirectory, $"appsettings.{builder.Environment.EnvironmentName.ToLower()}.json"), optional: true, reloadOnChange: true);
 
 var config = builder.Configuration;
 
-var messages = config.GetSection("Messages").Get<Messages>()!;
+var messages = config.GetSection("Messages").Get<Messages.Settings.Messages>()!;
 
 builder.Services
     .AddKafka(WexDivision.Health, typeof(Program).Assembly)

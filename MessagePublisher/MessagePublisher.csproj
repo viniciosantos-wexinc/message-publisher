@@ -18,12 +18,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="./*.json">
+    <None Update="*.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>    
-    <None Update="schemas/*.avsc">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Messages\Messages.csproj" />
   </ItemGroup>
 
 </Project>

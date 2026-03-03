@@ -1,6 +1,6 @@
 using System.Runtime.Serialization;
 
-namespace MessagePublisher.Models;
+namespace Messages.Models;
 
 public enum EmployeeCreatedType
 {

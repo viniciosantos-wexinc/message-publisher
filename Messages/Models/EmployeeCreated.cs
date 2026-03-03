@@ -1,6 +1,6 @@
 using System.Runtime.Serialization;
 
-namespace MessagePublisher.Models;
+namespace Messages.Models;
 
 [DataContract(Name = nameof(EmployeeCreated), Namespace = "EmployeeDataStream.Models.Kafka")]
 public record EmployeeCreated
