@@ -350,7 +350,12 @@ For local development without connecting to Aiven:
      "Kafka": {
        "BootstrapServers": "localhost:9092",
        "SecurityProtocol": "PLAINTEXT"
-     }
+     },
+     "SchemaRegistry": {
+        "Url": "https://wex-shared-aws-dev-kafka-ue1-wex-eventing-dev.g.aivencloud.com:13443",
+        "Password": "...",
+        "UserName": "..."
+    }
    }
    ```
 
