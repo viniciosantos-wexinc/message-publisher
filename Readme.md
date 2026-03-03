@@ -6,6 +6,24 @@ Prerequisites:
 - Kafka library `Wex.Libraries.Kafka` (version 8.4.0 or higher)
 - .NET 8.0 SDK
 
+## Table of Contents
+- [Aiven](#aiven)
+  - [Projects](#projects)
+  - [Services](#services)
+  - [Topics](#topics)
+  - [User](#user)
+- [Getting Started](#getting-started)
+  - [1. Create Message Models](#1-create-message-models)
+  - [2. Store Avro Schemas Locally](#2-store-avro-schemas-locally)
+  - [3. Configure Application Settings](#3-configure-application-settings)
+- [Usage](#usage)
+  - [1. Register Kafka Services](#1-register-kafka-services)
+  - [2. Publish Messages](#2-publish-messages)
+  - [3. Helper Method (Optional)](#3-helper-method-optional)
+- [Troubleshooting](#troubleshooting)
+  - [Common Issues](#common-issues)
+  - [Testing Locally](#testing-locally)
+
 # Aiven
 We host the schema, topics and users in Aiven. It is accessed through the `Aiven` tile in `myapps`, then selecting the project and then the service.
 
