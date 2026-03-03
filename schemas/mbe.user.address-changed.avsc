@@ -1,0 +1,23 @@
+﻿{
+  "type": "record",
+  "name": "address_changed",
+  "namespace": "wex.health.be.benefits",
+  "fields": [
+    {
+      "name": "user_id",
+      "type": "int"
+    },
+    {
+      "name": "address_id",
+      "type": "int"
+    },
+    {
+      "name": "change_type_description",
+      "type": {
+        "type": "enum",
+        "name": "ChangeType",
+        "symbols": [ "undefined", "insert", "update", "delete" ]
+      }
+    }
+  ]
+}

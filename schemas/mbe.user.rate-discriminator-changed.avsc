@@ -1,0 +1,27 @@
+{
+  "type": "record",
+  "name": "rate_discriminator_changed",
+  "namespace": "wex.health.be.benefits",
+  "fields": [
+    {
+      "name": "user_id",
+      "type": "int"
+    },
+    {
+      "name": "plan_type_id",
+      "type": {
+        "type": "array",
+        "items": "int"
+      },
+      "default": []
+    },
+    {
+      "name": "change_type_description",
+      "type": {
+        "type": "enum",
+        "name": "ChangeType",
+        "symbols": [ "undefined", "insert", "update", "delete" ]
+      }
+    }
+  ]
+}

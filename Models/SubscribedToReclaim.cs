@@ -1,0 +1,22 @@
+using System.Runtime.Serialization;
+
+namespace MessagePublisher.Models;
+
+[DataContract(Name = nameof(SubscribedToReclaim), Namespace = "EmployeeDataStream.Models.Kafka")]
+public record SubscribedToReclaim
+{
+    [DataMember(Name = "client_id")]
+    public int client_id { get; set; }
+
+    [DataMember(Name = "user_id")]
+    public int user_id { get; set; }
+
+    [DataMember(Name = "reclaim_batch_id")]
+    public int reclaim_batch_id { get; set; }
+
+    [DataMember(Name = "successfully_subscribed")]
+    public bool successfully_subscribed { get; set; }
+
+    [DataMember(Name = "errors")]
+    public string? errors { get; set; }
+}

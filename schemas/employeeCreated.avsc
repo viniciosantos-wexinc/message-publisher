@@ -1,0 +1,28 @@
+{
+  "namespace": "EmployeeDataStream.Models.Kafka",
+  "name": "EmployeeCreated",
+  "type": "record",
+  "fields": [
+    {
+      "name": "user_id",
+      "type": "int"
+    },
+    {
+      "name": "client_id",
+      "type": "int"
+    },
+    {
+      "name": "origin",
+      "type": {
+        "type": "enum",
+        "name": "OriginType",
+        "symbols": [ "census_import", "employee_editor", "quick_add" ]
+      }
+    },
+    {
+      "name": "reclaim_batch_id",
+      "type": [ "null", "int" ],
+      "default": null
+    }
+  ]
+}

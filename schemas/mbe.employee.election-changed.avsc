@@ -1,0 +1,32 @@
+﻿{
+  "type": "record",
+  "name": "election_changed",
+  "namespace": "wex.health.be.benefits",
+  "fields": [
+    {
+      "name": "user_id",
+      "type": "int"
+    },
+    {
+      "name": "parent_user_id",
+      "type": [ "null", "int" ],
+      "default": null
+    },
+    {
+      "name": "benefit_election_id",
+      "type": "int"
+    },
+    {
+      "name": "is_expanded",
+      "type": "boolean"
+    },
+    {
+      "name": "change_type_description",
+      "type": {
+        "type": "enum",
+        "name": "ChangeType",
+        "symbols": [ "undefined", "insert", "update", "delete" ]
+      }
+    }
+  ]
+}

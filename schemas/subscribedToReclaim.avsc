@@ -1,0 +1,28 @@
+{
+  "namespace": "EmployeeDataStream.Models.Kafka",
+  "name": "SubscribedToReclaim",
+  "type": "record",
+  "fields": [
+    {
+      "name": "user_id",
+      "type": "int"
+    },
+    {
+      "name": "client_id",
+      "type": "int"
+    },
+    {
+      "name": "reclaim_batch_id",
+      "type": "int"
+    },
+    {
+      "name": "successfully_subscribed",
+      "type": "boolean"
+    },
+    {
+      "name": "errors",
+      "type": [ "null", "string" ],
+      "default": null
+    }
+  ]
+}
